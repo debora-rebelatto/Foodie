@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodie/Templates/Login.dart';
 
+import 'Templates/MyApp.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xffF2F2F2),
       ),
-      home: Login(),
+      home: App(),
     );
   }
 }

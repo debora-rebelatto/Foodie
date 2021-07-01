@@ -21,6 +21,7 @@ class _AppState extends State<App> {
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
+          print(snapshot.error);
           return Icon(Icons.warning);
         }
 

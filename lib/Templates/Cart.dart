@@ -10,8 +10,14 @@ class Cart extends StatefulWidget {
 class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(color: Colors.black)
+      ),
+      body: Container(child: Text("lkajsdsa"),),
+
     );
   }
 }
