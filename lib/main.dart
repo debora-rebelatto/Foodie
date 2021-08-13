@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:foodie/Templates/Login.dart';
-
-import 'Templates/MyApp.dart';
+import 'package:foodie/Templates/HelloPage.dart';
+import 'package:foodie/provider/LoginData.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => LoginData()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,8 +22,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xffF2F2F2),
+        fontFamily: 'SFProText-Regular'
       ),
-      home: App(),
+      home: HelloPage(),
     );
   }
 }
